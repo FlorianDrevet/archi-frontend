@@ -16,13 +16,13 @@ export class ItemListComponent implements OnInit {
   }
 
   fetchItems(): void {
-    this.http.get<any[]>('http://10.123.1.4:8000/items/') // Remplacez par l'URL de votre serveur FastAPI
+    this.http.get<any[]>('http://10.123.2.1:8000/items/') // Remplacez par l'URL de votre serveur FastAPI
       .subscribe(items => this.items = items);
   }
 
   createItem(): void {
     const newItem = { name: 'New Item', description: 'Description' };
-    this.http.post('http://10.123.1.4:8000/items/', newItem) // Remplacez par l'URL de votre serveur FastAPI
+    this.http.post('http://10.123.2.1:8000/items/', newItem) // Remplacez par l'URL de votre serveur FastAPI
       .subscribe(response => {
         console.log('Item created successfully', response);
         this.fetchItems();
