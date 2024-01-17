@@ -6,7 +6,7 @@ import {NamesInterface} from "./shared/interfaces/names.interface";
   providedIn: 'root'
 })
 export class NamesService {
-  private apiUrl = 'http://10.0.2.4';
+  private apiUrl = 'http://10.0.2.124';
 
   constructor(private http: HttpClient) { }
 

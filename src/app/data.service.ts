@@ -7,7 +7,7 @@ import {Observable, tap} from 'rxjs';
 })
 export class DataService {
 
-  private backendUrl = 'http://10.0.2.4';
+  private backendUrl = 'http://10.0.2.124';
 
   constructor(private http: HttpClient) { }
 
