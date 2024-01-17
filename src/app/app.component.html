@@ -3,4 +3,13 @@
   {{ data | json }}
 </div>
 <p>Bye</p>
+
+<h1>Names</h1>
+<ul>
+  <li *ngFor="let name of names">{{ name }}</li>
+</ul>
+
+<input [(ngModel)]="newName" type="text" placeholder="Entrez un prénom">
+<button (click)="postName()">Envoyer</button>
+
 <router-outlet></router-outlet>
