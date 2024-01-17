@@ -1,11 +1,6 @@
-<app-root>
-  <p>List</p>
-  <app-item-list></app-item-list>
-  <router-outlet></router-outlet>
-
-  <p>Simple</p>
-  <div *ngIf="data">
-    {{ data | json }}
-  </div>
-</app-root>
-
+<p>Hello</p>
+<div *ngIf="data">
+  {{ data | json }}
+</div>
+<p>Bye</p>
+<router-outlet></router-outlet>
