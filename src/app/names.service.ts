@@ -25,6 +25,7 @@ export class NamesService {
   }
 
   postName(name: string) {
+    console.log(this.backendUrl);
     return this.http.post(`${this.backendUrl}/name`, { name }).pipe(
       tap(response => {
         console.log('Response:', response);

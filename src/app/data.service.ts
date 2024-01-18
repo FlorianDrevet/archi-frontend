@@ -12,6 +12,7 @@ export class DataService {
   constructor(private http: HttpClient) { }
 
   public getData(): Observable<any> {
+    console.log(this.backendUrl);
     return this.http.get(this.backendUrl).pipe(
       tap(response => {
         console.log('Response:', response);
