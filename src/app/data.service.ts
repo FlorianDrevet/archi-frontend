@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {catchError, Observable, tap, throwError} from 'rxjs';
+import {environment} from "../environment/environment";
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
-
-  private backendUrl = 'http://10.0.2.124';
+  private backendUrl = environment.backendUrl;
 
   constructor(private http: HttpClient) { }
 
